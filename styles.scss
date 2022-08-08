@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
 :root {
   --blade-hue: 120;
   --blade-lightness: 50%;
@@ -19,7 +21,7 @@ body {
   overflow: hidden;
   text-transform: uppercase;
   font-size: 1.5rem;
-  // font-family: "Source Sans Pro", sans-serif ;
+  font-family: "Source Sans Pro", sans-serif ;
 
   @media (max-width: 46.875em) {
     font-size: 1rem;

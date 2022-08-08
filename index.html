@@ -22,9 +22,18 @@
     <input type="radio" id="darksaber" name="color" />
 
     <div class="lightsaber">
-      <input type="checkbox" id="on-off" />
+      <input type="checkbox" id="on-off" onclick="playSound()" />
       <div class="blade"></div>
       <label for="on-off" class="hilt"> </label>
     </div>
+
+    <audio id="soundEffectLight">
+      <source src="sound-effects/lightsaber-sound.mpeg" type="audio/mpeg" />
+    </audio>
+    <audio id="soundEffectDark">
+      <source src="sound-effects/darksaber-sound.mpeg" type="audio/mpeg" />
+    </audio>
+
+    <script src="script.js"></script>
   </body>
 </html>
