@@ -16,6 +16,7 @@ function playSound() {
   // Sound effects of lightsabers
   if (box.checked == true && !darkSaber.checked) {
     lsStart.play();
+    setTimeout(console.log("Gello"), 10000);
     lsPulse.play();
   } else {
     lsPulse.pause();

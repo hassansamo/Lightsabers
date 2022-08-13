@@ -1,8 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
 
 :root {
   --blade-hue: 120;
   --blade-lightness: 50%;
+}
+
+@mixin color($color) {
+  accent-color: $color;
+  color: $color;
+  // -webkit-text-stroke: 1px $color;
 }
 
 *,
@@ -21,7 +27,7 @@ body {
   overflow: hidden;
   text-transform: uppercase;
   font-size: 1.5rem;
-  font-family: "Source Sans Pro", sans-serif ;
+  font-family: "Source Sans Pro", sans-serif;
 
   @media (max-width: 46.875em) {
     font-size: 1rem;
@@ -36,8 +42,40 @@ body {
   margin: 0.5em;
 }
 
+// Color picker and radio buttons styling
+
+#green,
+[for="green"] {
+  @include color(green);
+}
+
+#blue,
+[for="blue"] {
+  @include color(blue);
+}
+
+#yellow,
+[for="yellow"] {
+  @include color(yellow);
+}
+
+#purple,
+[for="purple"] {
+  @include color(purple);
+}
+
+#red,
+[for="red"] {
+  @include color(red);
+}
+
+#darksaber,
+[for="darksaber"] {
+  @include color(black);
+}
+
 label:not(.hilt) {
-  color: hsl(40, 100%, 97%);
+  // color: hsl(40, 100%, 97%);
   font-weight: bold;
   align-self: start;
 }
