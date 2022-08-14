@@ -75,7 +75,6 @@ body {
 }
 
 label:not(.hilt) {
-  // color: hsl(40, 100%, 97%);
   font-weight: bold;
   align-self: start;
 }
@@ -83,8 +82,9 @@ label:not(.hilt) {
 // lightsaber styling
 
 .lightsaber {
-  margin-top: 25vh;
   grid-column: 1/-1;
+  position: relative;
+  margin-top: 25vh;
   position: relative;
 }
 
