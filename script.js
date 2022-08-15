@@ -1,4 +1,6 @@
 function playSound() {
+  let tip = document.querySelector(".hilt");
+
   // lightsabers
   let lsStart = document.getElementById("lsStart");
   let lsPulse = document.getElementById("lsPulse");
@@ -15,8 +17,9 @@ function playSound() {
 
   // Sound effects of lightsabers
   if (box.checked == true && !darkSaber.checked) {
+    tip.style.setProperty("--op", 0);
+    console.log(tip.style);
     lsStart.play();
-    setTimeout(console.log("Gello"), 10000);
     lsPulse.play();
   } else {
     lsPulse.pause();
@@ -26,6 +29,7 @@ function playSound() {
 
   // Sound effects of darksabers
   if (box.checked == true && darkSaber.checked) {
+    tip.style.setProperty("--op", 0);
     dsStart.play();
     dsPulse.play();
   } else {

@@ -3,6 +3,9 @@
 :root {
   --blade-hue: 120;
   --blade-lightness: 50%;
+  --blade-clr: white;
+  --accent-clr: floralwhite;
+  --op: 1;
 }
 
 @mixin color($color) {
@@ -29,7 +32,7 @@ body {
   font-family: "Source Sans Pro", sans-serif;
 
   @media (max-width: 46.875em) {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 }
 
@@ -71,7 +74,7 @@ body {
 #darksaber,
 [for="darksaber"] {
   @include color(black);
-  -webkit-text-stroke: 0.25px floralwhite;
+  -webkit-text-stroke: 0.25px var(--accent-clr);
 }
 
 label:not(.hilt) {
@@ -121,11 +124,21 @@ label:not(.hilt) {
     hsl(39 75% 50%) 60px 80px,
     silver 0 100%
   );
+
+  &::before {
+    content: "Click here →";
+    color: var(--accent-clr);
+    position: absolute;
+    inset: 35px 30px auto auto;
+    white-space: nowrap;
+    text-transform: capitalize;
+    opacity: var(--op);
+  }
 }
 
 .blade {
   position: absolute;
-  background: white;
+  background: var(--blade-clr);
   height: 350%;
   width: 100%;
   bottom: 100%;
@@ -156,7 +169,7 @@ label:not(.hilt) {
   }
 
   &::before {
-    background: white;
+    background: var(--blade-clr);
     z-index: 10;
   }
 }
@@ -215,7 +228,7 @@ label:not(.hilt) {
 
 @media (max-width: 31.25em) {
   body {
-    grid-template-rows: repeat(8, 70px);
+    grid-template-rows: repeat(7, 70px);
     grid-template-columns: 100px 50px 1fr;
   }
 
@@ -224,6 +237,7 @@ label:not(.hilt) {
     grid-row: auto;
     align-self: center;
     justify-self: left;
+    margin: 1.5em;
   }
 
   label:not(.hilt) {
