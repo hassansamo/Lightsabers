@@ -8,7 +8,6 @@
 @mixin color($color) {
   accent-color: $color;
   color: $color;
-  // -webkit-text-stroke: 1px $color;
 }
 
 *,
@@ -72,6 +71,7 @@ body {
 #darksaber,
 [for="darksaber"] {
   @include color(black);
+  -webkit-text-stroke: 0.25px floralwhite;
 }
 
 label:not(.hilt) {
