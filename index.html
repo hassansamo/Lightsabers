@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="dist/styles.css" />
     <title>Lightsabers</title>
   </head>
+
   <body>
+    <!-- Color Options -->
     <label for="green">Green</label>
     <input type="radio" id="green" name="color" checked />
     <label for="blue">Blue</label>
@@ -21,6 +23,7 @@
     <label for="darksaber">Darksaber</label>
     <input type="radio" id="darksaber" name="color" />
 
+    <!-- Lightsaber-->
     <div class="lightsaber">
       <input type="checkbox" id="on-off" onclick="playSound()" />
       <div class="blade"></div>
@@ -49,6 +52,7 @@
       <source src="sound-effects/Darksaber/Darksaber-stop.mp3" />
     </audio>
 
+    <!-- Custom JS file -->
     <script src="script.js"></script>
   </body>
 </html>

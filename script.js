@@ -6,13 +6,13 @@ function playSound() {
   let lsPulse = document.getElementById("lsPulse");
   let lsStop = document.getElementById("lsStop");
 
-  // darksaber
+  // Darksaber
   let dsStart = document.getElementById("dsStart");
   let dsPulse = document.getElementById("dsPulse");
   let dsStop = document.getElementById("dsStop");
-
   let darkSaber = document.getElementById("darksaber");
 
+  // Checkbox
   let box = document.getElementById("on-off");
 
   // Sound effects of lightsabers
@@ -27,7 +27,7 @@ function playSound() {
     lsStop.play();
   }
 
-  // Sound effects of darksabers
+  // Sound effects of Darksaber
   if (box.checked == true && darkSaber.checked) {
     tip.style.setProperty("--op", 0);
     dsStart.play();
